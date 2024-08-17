@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Job;
+use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
@@ -14,6 +14,6 @@ class SearchController extends Controller
             ->where('title', 'LIKE', '%'.request('q').'%')
             ->get();
 
-        return view('components.results', ['jobs' => $jobs]);
+        return view('results', ['jobs' => $jobs]);
     }
 }
