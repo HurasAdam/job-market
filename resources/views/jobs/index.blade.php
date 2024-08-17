@@ -3,10 +3,12 @@
     <div class="space-y-10 pt-6">
         <section class="text-center">
             <h1 class="font-bold text-4xl">Find your dream job</h1>
-            <form action="" class="mt-6">
-                <input type="text" placeholder="Project Manager"
-                    class="rounded bg-white/15 border-white/5 px-5 py-4 w-full max-w-xl ">
-            </form>
+
+            <x-forms.form class="mt-6" action="/search">
+                <x-forms.input :label="false" name="q" placeholder="Project Owner" />
+
+                <button>Submit</button>
+            </x-forms.form>
         </section>
         <section class="pt-10">
             <x-section-header>Featured jobs</x-section-header>
